@@ -19,7 +19,36 @@ $tim = $this->config->item('images_tim');
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Mag - Video &amp; Magazine HTML Template</title>
+
+    <?php if ($page == 'Detail') {?>
+        <title><?=ucwords($detail['judul_artikel']);?> - Muntaha</title>
+        <meta name="description" content="<?=$detail['gagasan'];?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Search Engine -->
+        <meta name="description" content="<?=$detail['gagasan'];?> - Muntaha">
+        <meta name="image" content="<?=$getupload.$detail['thumbnail'];?>">
+        <!-- Schema.org for Google -->
+        <meta itemprop="name" content="<?=ucwords($detail['judul_artikel']);?> - Muntaha">
+        <meta itemprop="description" content="<?=$detail['gagasan'];?>">
+        <meta itemprop="image" content="<?=$getupload.$detail['thumbnail'];?>">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="<?=ucwords($detail['judul_artikel']);?> - Muntaha">
+        <meta name="twitter:description" content="<?=$detail['gagasan'];?>">
+        <meta name="twitter:site" content="<?=current_url();?>">
+        <meta name="twitter:creator" content="@muntaha">
+        <meta name="twitter:image:src" content="<?=$getupload.$detail['thumbnail'];?>">
+        <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+        <meta name="og:title" content="<?=ucwords($detail['judul_artikel']);?> - Muntaha">
+        <meta name="og:description" content="<?=$detail['gagasan'];?>">
+        <meta name="og:image" content="<?=$getupload.$detail['thumbnail'];?>">
+        <meta name="og:url" content="<?=current_url();?>">
+        <meta name="og:site_name" content="Muntaha">
+        <meta name="og:locale" content="id_ID">
+        <meta name="og:type" content="website">
+    <?php }else{?>
+        <title>Muntaha</title>
+    <?php }?>
 
     <!-- Favicon -->
     <link rel="icon" href="<?=$images;?>core-img/favicon.ico">

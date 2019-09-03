@@ -5,7 +5,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2>Single Post</h2>
+                        <h2><?=$detail['kategori'];?></h2>
                     </div>
                 </div>
             </div>
@@ -64,15 +64,13 @@
 
                             <!-- Like Dislike Share -->
                             <div class="like-dislike-share my-5">
-                                <h4 class="share">240<span>Share</span></h4>
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+                            <div class="sharethis-inline-share-buttons"></div>
                             </div>
 
                             <!-- Post Author -->
                             <div class="post-author d-flex align-items-center">
                                 <div class="post-author-thumb">
-                                    <img src="<?=$images;?>bg-img/52.jpg" alt="">
+                                    <img src="<?=$tim.$getupload.$detail['photo'];?>&w=400&h=400&zc=1" alt="">
                                 </div>
                                 <div class="post-author-desc pl-4">
                                     <a href="#" class="author-name"><?=ucwords($detail['nama']);?></a>
@@ -98,11 +96,11 @@
                                         <img src="<?=$tim.$getupload.$lainnya['thumbnail'];?>&w=600&h=400&zc=1" alt="<?=ucwords($lainnya['judul_artikel']);?>">
                                     </div>
                                     <div class="post-content">
-                                        <a href="single-post.html" class="post-title"><?=ucwords($lainnya['judul_artikel']);?></a>
+                                        <a href="<?=site_url('detail/'.$lainnya['urltitle'].'/'.$lainnya['idartikel'].'/'.strtolower(url_title($lainnya['judul_artikel'])));?>" class="post-title"><?=ucwords($lainnya['judul_artikel']);?></a>
                                         <div class="post-meta d-flex">
                                             <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$lainnya['dibaca'];?></a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -218,19 +216,12 @@
                 <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                     <div class="sidebar-area bg-white mb-30 box-shadow">
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
+                        <!-- <div class="single-sidebar-widget p-30"> -->
                             <!-- Social Followers Info -->
-                            <div class="social-followers-info">
-                                <!-- Facebook -->
-                                <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
-                                <!-- Twitter -->
-                                <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                                <!-- YouTube -->
-                                <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                                <!-- Google -->
-                                <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
+                            <div class="single-sidebar-widget">
+                            <a href="#" class="add-img"><img src="<?=$images;?>bg-img/add2.png" alt=""></a>
                             </div>
-                        </div>
+                        <!-- </div> -->
 
                         <!-- Sidebar Widget -->
                         <div class="single-sidebar-widget p-30">
@@ -295,3 +286,4 @@
     </section>
     <!-- ##### Post Details Area End ##### -->
     <?php include_once dirname(__FILE__).'/../layouts/footer.php';?>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d6c742516b81b0012138d1e&product=inline-share-buttons' async='async'></script>

@@ -49,8 +49,8 @@
                         <a href="<?=site_url('detail/'.$populer['urltitle'].'/'.$populer['idartikel'].'/'.strtolower(url_title($populer['judul_artikel'])));?>" class="post-title"><?=ucwords($populer['judul_artikel']);?></a>
                         <div class="post-meta d-flex justify-content-between">
                             <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$populer['dibaca'];?></a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                            <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a> -->
                         </div>
                     </div>
                 </div>
@@ -79,8 +79,8 @@
                         <a href="<?=site_url('detail/'.$recent['urltitle'].'/'.$recent['idartikel'].'/'.strtolower(url_title($recent['judul_artikel'])));?>" class="post-title"><?=ucwords($recent['judul_artikel']);?></a>
                         <div class="post-meta d-flex justify-content-between">
                             <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$recent['dibaca'];?></a>
-                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                            <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a> -->
                         </div>
                     </div>
                 </div>
@@ -103,11 +103,19 @@
                 <div class="trending-post-slides owl-carousel">
                     <!-- Single Trending Post -->
                 <?php foreach ($nahwu as $nahwu) {?>
-                    <div class="single-trending-post">
-                        <img src="<?=$tim.$getupload.$nahwu['thumbnail'];?>&w=600&h=400&zc=1" alt="<?=ucwords($nahwu['judul_artikel']);?>">
+                    <div class="single-blog-post style-4">
+                        <div class="post-thumbnail">
+                            <img src="<?=$tim.$getupload.$nahwu['thumbnail'];?>&w=600&h=400&zc=1" alt="<?=ucwords($nahwu['judul_artikel']);?>">
+                            <a href="<?=site_url('detail/'.$nahwu['urltitle'].'/'.$nahwu['idartikel'].'/'.strtolower(url_title($nahwu['judul_artikel'])));?>"></a>
+                            <!-- <span class="video-duration">09:27</span> -->
+                        </div>
                         <div class="post-content">
-                            <a href="<?=site_url('kategori/'.$nahwu['urltitle']);?>" class="post-cata"><?=ucwords($nahwu['kategori']);?></a>
                             <a href="<?=site_url('detail/'.$nahwu['urltitle'].'/'.$nahwu['idartikel'].'/'.strtolower(url_title($nahwu['judul_artikel'])));?>" class="post-title"><?=ucwords($nahwu['judul_artikel']);?></a>
+                            <div class="post-meta d-flex">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$nahwu['dibaca'];?></a>
+                                <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a> -->
+                            </div>
                         </div>
                     </div>
                 <?php }?>
@@ -180,8 +188,8 @@
                                             <a href="<?=site_url('detail/'.$sb1['urltitle'].'/'.$sb1['idartikel'].'/'.strtolower(url_title($sb1['judul_artikel'])));?>" class="post-title"><?=ucwords($sb1['judul_artikel']);?></a>
                                             <div class="post-meta d-flex">
                                                 <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$sb1['dibaca'];?></a>
-                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                                <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -216,8 +224,8 @@
                             <a href="<?=site_url('video/'.$kajian['idartikel'].'/'.strtolower(url_title($kajian['judul_artikel'])));?>" class="post-title"><?=ucwords($kajian['judul_artikel']);?></a>
                             <div class="post-meta d-flex">
                                 <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$kajian['dibaca'];?></a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a> -->
                             </div>
                         </div>
                     </div>
@@ -257,8 +265,8 @@
                             <!-- Post Meta -->
                             <div class="post-meta pl-3">
                                 <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> <?=$shorof['dibaca'];?></a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                <!-- <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a> -->
                             </div>
                             <!-- Share Info -->
                             <div class="share-info">

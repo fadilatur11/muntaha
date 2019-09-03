@@ -16,7 +16,8 @@ class Kategori extends CI_Controller {
         //$this->output->cache(10); // penyimpanan cache dalam hitungan menit
         $data['page'] = 'Kategori';
         $idkategori = $this->Model_t_kategori->kategori($kategori);
-        $data['kategori'] = $this->Model_t_artikel->kategori($idkategori['id']);
+		$data['kategori'] = $this->Model_t_artikel->kategori($idkategori['id']);
+		$data['section'] = $this->Model_t_kategori->get();
 		$this->load->view('kategori/index',$data);
 	}
 }
