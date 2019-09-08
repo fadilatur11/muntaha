@@ -13,7 +13,7 @@ class Video extends CI_Controller {
 	function index($id=0)
 	{
         //$this->output->cache(10); // penyimpanan cache dalam hitungan menit
-        $data['page'] = 'Detail';
+        $data['page'] = 'detail';
         $data['video'] = $this->Model_t_artikel->detail($id);
         $data['lainnya'] = $this->Model_t_artikel->other(3,3,0);
         $artikel = $this->Model_t_artikel->detail($id);
